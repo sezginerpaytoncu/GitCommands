@@ -1,0 +1,19 @@
+git branch cssbranch
+cssbranch isminde bir branch oluşturur
+--------------------------------------------------
+git branch -a
+tüm branch'leri gösterir
+--------------------------------------------------
+git checkout cssbranch
+css branch'ine gidersin(satırda en sağda branch ismi değişir. master'dan cssbranch'e geçer)
+--------------------------------------------------
+değişikliğini yaptın...
+git add bilmemne.css
+git commit -m 'Sayfa görünümü değişti'
+sadece css branch'inde değişiklik olur
+eğer başka bir branch'e gidersen css branch'deki yapılan değişiklikleri görmezsin
+--------------------------------------------------
+git merge cssbranch htmlbranck
+css ve html branch'larında yapılan değişiklikleri master'a uygular. 
+Otomatik olarak merge branches mesajı gelir, insert etmek için i'ye basıp :x! ile çıkış yaparsın
+--------------------------------------------------

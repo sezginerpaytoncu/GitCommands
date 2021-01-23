@@ -1,0 +1,28 @@
+				LOCAL					|	REMOTE
+Working Directory	Staging Area		Local Repo		|	Remote Repo
+
+
+
+cd FileName/
+Repository yapılacak dosya yoluna git
+
+git init
+Proje dosyasının içerisine boş bir git repository oluşturur
+
+git status
+git'in durumun nedir, dosya geçiş bölgesinde mi working area'da mı görülür.
+
+git add .
+Stagin Area'ya geçiş?	(Changes to be commited - alanı)
+
+git commit
+git commit -m 'mesaj'
+Stagin area'dakileri, lokal repo alanına gönderir. Mesajda neler yaptığını belirtirsin.
+
+
+clear
+Tüm ekrandaki satırları temizler.
+
+code . 
+Visual Studio'yu açmak için diyor?
+

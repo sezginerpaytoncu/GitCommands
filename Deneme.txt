@@ -1,3 +1,7 @@
 a yap bi de
-bunu DE yap diye değiştir
+<<<<<<< HEAD
+bunu DE yap diye değiştir // bunu çözdüm
+=======
+c yap 
+>>>>>>> dbacf4fe60a5cf16ea3813ef70a19fb5860529de
 altına

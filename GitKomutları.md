@@ -1,23 +1,23 @@
+# Temel Git Komutları
+
 				LOCAL					|	REMOTE
-Working Directory  ->	 Staging Area    ->	Local Repository	|	Remote Repository
+Working Directory  =>	 Staging Area    =>	Local Repository	|||		Remote Repository
 			(Working Tree)
 
+
 --------------------------------------------------
-cd FileName/
-Repository yapılacak dosya yoluna git
---------------------------------------------------
-git init
+``git init``
 Proje dosyasının içerisine boş bir git repository oluşturur
 --------------------------------------------------
-git status
+``git status``
 git'in durumun nedir, dosya geçiş bölgesinde mi working area'da mı görülür.
-git status -s
+``git status -s``
 sadece modified yapılanları listeler
 --------------------------------------------------
-git add .
-Stagin Area'ya geçiş?	(Changes to be commited - alanı)
+``git add .``
+Staging Area'ya geçiş?	(Changes to be commited - alanı)
 --------------------------------------------------
-git add -A
+``git add -A``
 Yaptığın tüm değişikliklerin stagin area'ya gitmesini sağlar
 --------------------------------------------------
 git commit
@@ -25,91 +25,64 @@ Böyle yaparsan Vim Editör açar, mesaj girmeni ister.
 Editörden çıkmak için ESC'ye, bas aşağıdaki komutu yaz.
 :x! 
 --------------------------------------------------
-git commit -m 'mesaj'
-Stagin area'dakileri, lokal repo alanına gönderir. Mesajda neler yaptığını belirtirsin.
+``git commit -m 'mesaj'``
+Staging area'dakileri, lokal repo alanına gönderir. Mesajda kısmında commit log mesajı yazılır.
 --------------------------------------------------
-clear
-Tüm ekrandaki satırları temizler.
---------------------------------------------------
-code . 
-Visual Studio'yu açmak için diyor?
---------------------------------------------------
-touch text.txt
-Bulunduğun dosya dizininde dosya açar
-rm text.txt
-dosyayı siler
---------------------------------------------------
-ls -al
-list all? tüm dosyaların durumunu gösterir(linux komutu)
---------------------------------------------------
-mv text.txt readme.txt
-text ismini readme'ye çevirir
---------------------------------------------------
-git restore --staged Deneme.txt
+``git restore --staged Deneme.txt``
 Deneme.txt'yi daha önce staging area'ya açmıştım. O değişikliği geri çekmek için...Sonrasında git status'de yine kırmızı görünür.
 --------------------------------------------------
-git restore Deneme.txt
+``git restore Deneme.txt``
 Yaptığın değişiklikleri working directory'nde de geri alıp görebilirsin
 --------------------------------------------------
-git show
+``git show``
 Son yapılan değişikliği gösterir
 --------------------------------------------------
-git log
+``git log``
 Yapılan tüm commitlerin listesini çıkarır
-git log --oneline
+``git log --oneline``
 Daha sade bir şekilde commit listesini verir
-git log -p -2
+``git log -p -2``
 Son 2 logunu gösterir
 Q'ya basarak tekrar Bash'e dönebilirsin
-git log --since=30minutes
+``git log --since=30minutes``
 30 dakika içerisinde yapılan commit'leri gösterir (30minutes yerine => 5hours, 3days, 2weeks gibi gibi)
 --------------------------------------------------
-git checkout xxxxxx
+``git checkout xxxxxx``
 xxxxx log'una geri döner.Buradan devam edersen ilerisini kaybedersin.
-git checkout master
+``git checkout master``
 Tekrar ileri eski yerine gider
-git revert xxxxxx
+``git revert xxxxxx``
 Aradan bir commit'i/log'u iptal edip çıkartmak için
 --------------------------------------------------
-TEHLİKELİ!!!
+### RESET !!!TEHLİKELİ!!!
 Girdiğin commit id'ye kadar olan tüm logları siler ve eskiye döner
-git reset --soft COMMIT_ID
+``git reset --soft COMMIT_ID``
 Repoyu resetler	
-git reset --mixed COMMIT_ID
+``git reset --mixed COMMIT_ID``
 Repo+Stating Area resetler
-git reset --hard COMMIT_ID
+``git reset --hard COMMIT_ID``
 Herşeyi resetler
---------------------------------------------------
-touch .gitignore
-.gitignore dosyasını oluşturur
-touch log.txt
-log.txt dosyasını oluşturur
--Daha sonra bunları repoya gönder
-git'in log.txt ile ilgilenmesini istemiyorsan; .gitignore içine dosyanın adını yaz. git status'e bakarsan artık log.txt'yi görmezsin
 --------------------------------------------------
 .ignore projenin başında atmazsan, sorun olur yine status'de istemediğin dosyayı görürsün
 çözüm;
-git rm -r --cached .
+``git rm -r --cached .``
 track edilen tüm dosyaları siler/dosyaları kaldırmaz, izlemeden kaldırır
-git add .
+``git add .``
 tüm dosyaları tekrar eklersin
-git commit -m 'git ignore sorunu çözüldü'
+``git commit -m 'git ignore sorunu çözüldü'``
 --------------------------------------------------
-.gitignore
+### .gitignore
 log.txt
 sadece bu dosyayı izlemez
+
 directory/xxx
 xxx dosya yolundakileri izlemez
+
 *.xyz
 .xyz uzantılı dosyaları izlemez
---------------------------------------------------
 
 
-
-
-
-
-
-RENKLER
-kırmızı: çalışma alanında
-yeşil: staging area'da
+node_modules/
+dist/
+# Visual Studo 2015 cache/options directory
+.vs/

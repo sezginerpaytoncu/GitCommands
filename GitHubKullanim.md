@@ -1,3 +1,7 @@
+# Git & Github
+
+
+Local'de bulunan repoya remote repoyu tanıtmak
 git remote add origin https://github.com/sezginerpaytoncu/FirstGitHubTrial.git
 ------------------------------
 git branch -M main

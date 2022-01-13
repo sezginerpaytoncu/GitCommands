@@ -6,70 +6,117 @@ Working Directory  =>	 Staging Area    =>	Local Repository	|||		Remote Repositor
 
 
 --------------------------------------------------
-``git init``
 Proje dosyasının içerisine boş bir git repository oluşturur
+```
+git init
+```
 --------------------------------------------------
-``git status``
 git'in durumun nedir, dosya geçiş bölgesinde mi working area'da mı görülür.
-``git status -s``
+```
+git status
+```
 sadece modified yapılanları listeler
+```
+git status -s
+```
 --------------------------------------------------
-``git add .``
-Staging Area'ya geçiş?	(Changes to be commited - alanı)
+Staging Area'ya geçiş	(Changes to be commited - alanı)
+```
+git add .
+```
 --------------------------------------------------
-``git add -A``
 Yaptığın tüm değişikliklerin stagin area'ya gitmesini sağlar
+```
+git add -A
+```
 --------------------------------------------------
-git commit
 Böyle yaparsan Vim Editör açar, mesaj girmeni ister. 
+```
+git commit
+```
 Editörden çıkmak için ESC'ye, bas aşağıdaki komutu yaz.
 :x! 
 --------------------------------------------------
-``git commit -m 'mesaj'``
 Staging area'dakileri, lokal repo alanına gönderir. Mesajda kısmında commit log mesajı yazılır.
+```
+git commit -m 'mesaj'
+```
 --------------------------------------------------
-``git restore --staged Deneme.txt``
 Deneme.txt'yi daha önce staging area'ya açmıştım. O değişikliği geri çekmek için...Sonrasında git status'de yine kırmızı görünür.
+```
+git restore --staged Deneme.txt
+```
 --------------------------------------------------
-``git restore Deneme.txt``
 Yaptığın değişiklikleri working directory'nde de geri alıp görebilirsin
+```
+git restore Deneme.txt
+```
 --------------------------------------------------
-``git show``
 Son yapılan değişikliği gösterir
+```
+git show
+```
 --------------------------------------------------
-``git log``
-Yapılan tüm commitlerin listesini çıkarır
-``git log --oneline``
-Daha sade bir şekilde commit listesini verir
-``git log -p -2``
-Son 2 logunu gösterir
+Yapılan tüm commitlerin listesini çıkarmak için;
+```
+git log
+```
+Daha sade bir şekilde commit listesi için;
+```
+git log --oneline
+```
+Son 2 log'u görmek için;
+```
+git log -p -2
+```
 Q'ya basarak tekrar Bash'e dönebilirsin
-``git log --since=30minutes``
+
 30 dakika içerisinde yapılan commit'leri gösterir (30minutes yerine => 5hours, 3days, 2weeks gibi gibi)
+```
+git log --since=30minutes
+```
 --------------------------------------------------
-``git checkout xxxxxx``
 xxxxx log'una geri döner.Buradan devam edersen ilerisini kaybedersin.
-``git checkout master``
+```
+git checkout xxxxxx
+```
 Tekrar ileri eski yerine gider
-``git revert xxxxxx``
+```
+git checkout master
+```
 Aradan bir commit'i/log'u iptal edip çıkartmak için
+```
+git revert xxxxxx
+```
 --------------------------------------------------
 ### RESET !!!TEHLİKELİ!!!
 Girdiğin commit id'ye kadar olan tüm logları siler ve eskiye döner
-``git reset --soft COMMIT_ID``
+```
+git reset --soft COMMIT_ID
+```
 Repoyu resetler	
-``git reset --mixed COMMIT_ID``
+```
+git reset --mixed COMMIT_ID
+```
 Repo+Stating Area resetler
-``git reset --hard COMMIT_ID``
+```
+git reset --hard COMMIT_ID
+```
 Herşeyi resetler
 --------------------------------------------------
 .ignore projenin başında atmazsan, sorun olur yine status'de istemediğin dosyayı görürsün
 çözüm;
-``git rm -r --cached .``
+```
+git rm -r --cached .
+```
 track edilen tüm dosyaları siler/dosyaları kaldırmaz, izlemeden kaldırır
-``git add .``
+```
+git add .
+```
 tüm dosyaları tekrar eklersin
-``git commit -m 'git ignore sorunu çözüldü'``
+```
+git commit -m 'git ignore sorunu çözüldü'
+```
 --------------------------------------------------
 ### .gitignore
 log.txt

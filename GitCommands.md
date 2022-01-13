@@ -131,5 +131,5 @@ xxx dosya yolundakileri izlemez
 
 node_modules/
 dist/
-# Visual Studo 2015 cache/options directory
+#Visual Studo 2015 cache/options directory
 .vs/

@@ -36,6 +36,7 @@ git commit
 ```
 Editörden çıkmak için ESC'ye, bas aşağıdaki komutu yaz.
 :x! 
+
 --------------------------------------------------
 Staging area'dakileri, lokal repo alanına gönderir. Mesajda kısmında commit log mesajı yazılır.
 ```
@@ -103,6 +104,7 @@ Repo+Stating Area resetler
 git reset --hard COMMIT_ID
 ```
 Herşeyi resetler
+
 --------------------------------------------------
 .ignore projenin başında atmazsan, sorun olur yine status'de istemediğin dosyayı görürsün
 çözüm;

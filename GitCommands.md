@@ -34,8 +34,7 @@ Böyle yaparsan Vim Editör açar, mesaj girmeni ister.
 ```
 git commit
 ```
-Editörden çıkmak için ESC'ye, bas aşağıdaki komutu yaz.
-:x! 
+Editörden çıkmak için ESC'ye bas ve bu komutu yaz => :x! 
 
 --------------------------------------------------
 Staging area'dakileri, lokal repo alanına gönderir. Mesajda kısmında commit log mesajı yazılır.

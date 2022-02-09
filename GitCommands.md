@@ -1,9 +1,6 @@
 # Temel Git Komutları
 
-				LOCAL					|	REMOTE
-Working Directory  =>	 Staging Area    =>	Local Repository	|||		Remote Repository
-			(Working Tree)
-
+![Git Diagram](./assets/GitDiagram.svg)
 
 --------------------------------------------------
 Proje dosyasının içerisine boş bir git repository oluşturur

@@ -86,7 +86,7 @@ Aradan bir commit'i/log'u iptal edip çıkartmak için
 git revert xxxxxx
 ```
 --------------------------------------------------
-### RESET !!!TEHLİKELİ!!!
+### RESET !!!
 Girdiğin commit id'ye kadar olan tüm logları siler ve eskiye döner
 ```
 git reset --soft COMMIT_ID

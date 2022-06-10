@@ -121,10 +121,10 @@ log.txt
 sadece bu dosyayı izlemez
 
 directory/xxx
-xxx dosya yolundakileri izlemez
+xxx => dosya yolundakileri izlemez
 
 *.xyz
-.xyz uzantılı dosyaları izlemez
+.xyz => uzantılı dosyaları izlemez
 
 
 node_modules/
